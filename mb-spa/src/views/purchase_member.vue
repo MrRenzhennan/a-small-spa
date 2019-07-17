@@ -1,6 +1,11 @@
 <!-- 购买会员 -->
 <template>
   <div class="purchase_member" v-html="html_data"></div>
+  <!-- <div class="purchase_member">
+    <p>
+      <img src="../assets/buy_work.png" alt="图片加载失败" />
+    </p>
+  </div> -->
 </template>
 
 <script>
@@ -32,8 +37,8 @@ export default {
     }
   }
 }
-.purchase_member /deep/ img{
+.purchase_member /deep/ img {
   width: 100%;
-  display:block;
+  display: block;
 }
 </style>

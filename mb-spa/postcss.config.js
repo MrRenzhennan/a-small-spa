@@ -12,7 +12,7 @@ module.exports = {
       viewportHeight: 1334, // (Number) 设计稿的高度.
       unitPrecision: 3, // (Number) px转成vw、vh后小数点保留的位数 .
       viewportUnit: 'vw', // (String) 单位.
-      selectorBlackList: ['.ignore', '.hairlines'], // (Array) 不转换的类名.
+      selectorBlackList: ['.ignore', '.hairlines','van'], // (Array) 不转换的类名.
       minPixelValue: 1, // (Number) 不转化为vw的最小px值.
       mediaQuery: false // (Boolean) 允许在媒体查询中转换px.
     },

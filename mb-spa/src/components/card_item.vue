@@ -87,13 +87,13 @@ export default {
         background-image: url(../assets/sign_up_btn.png);
       }
       &.sign_down_btn {
-        background-image: url(../assets/sign_up_btn.png);
+        background-image: url(../assets/see_details.png);
       }
       &.schedule_classes_up_btn {
         background-image: url(../assets/schedule_classes_up_btn.png);
       }
       &.schedule_classes_down_btn {
-        background-image: url(../assets/schedule_classes_up_btn.png);
+        background-image: url(../assets/see_details.png);
       }
     }
   }

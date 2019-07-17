@@ -6,6 +6,12 @@ import PurchaseMember from './views/purchase_member.vue'
 const MemberAppointment = () => import('./views/member_appointment.vue');
 const ResearchActivities = () => import('./views/research_activities.vue');
 const LocalNews = () => import('./views/local_news.vue');
+
+const Login = () => import('./views/login.vue');//密码登陆
+const CodeLogin = () => import('./views/code-login.vue');//验证码登陆
+const Registered = () => import('./views/registered.vue');//注册
+const ForgetPassword = () => import('./views/forget-password.vue');//忘记密码
+
 Vue.use(Router)
 
 export default new Router({
@@ -40,10 +46,25 @@ export default new Router({
         },
       ]
     },
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    // }
+    {
+      path: '/login',
+      name: 'login',
+      component: Login,
+    },
+    {
+      path: '/code-login',
+      name: 'code-login',
+      component: CodeLogin,
+    },
+    {
+      path: '/registered',
+      name: 'registered',
+      component: Registered,
+    },
+    {
+      path: '/forget_password',
+      name: 'forget_password',
+      component: ForgetPassword,
+    },
   ]
 })

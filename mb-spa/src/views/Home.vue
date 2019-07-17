@@ -1,27 +1,32 @@
 <template>
-  <div class="home">
-    <div class="swiper-title"></div>
-    <TabBar />
-    <div class="center">
-      <transition name="fade">
-        <keep-alive>
-          <router-view />
-        </keep-alive>
-      </transition>
+  <div>
+    <div class="home">
+      <RegisterLogIn />
+      <div class="swiper-title"></div>
+      <TabBar />
+      <div class="center">
+        <transition name="fade">
+          <keep-alive>
+            <router-view />
+          </keep-alive>
+        </transition>
+      </div>
+      <Foot />
     </div>
-    <Foot />
   </div>
 </template>
 
 <script>
 import TabBar from "@/components/tab_bar.vue";
 import Foot from "@/components/foot.vue";
+import RegisterLogIn from "@/components/register_log_in.vue";
 export default {
   name: "home",
   components: {
+    RegisterLogIn,
     TabBar,
     Foot
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>
