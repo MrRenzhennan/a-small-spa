@@ -4,8 +4,8 @@ import Home from './views/Home.vue'
 import PurchaseMember from './views/purchase_member.vue'
 // import MemberAppointment from './views/member_appointment.vue'
 const MemberAppointment = () => import('./views/member_appointment.vue');
-import ResearchActivities from './views/research_activities.vue'
-import LocalNews from './views/local_news.vue'
+const ResearchActivities = () => import('./views/research_activities.vue');
+const LocalNews = () => import('./views/local_news.vue');
 Vue.use(Router)
 
 export default new Router({
@@ -16,6 +16,7 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home,
+      redirect:'/purchase_member',
       children: [
         {
           path: 'purchase_member',

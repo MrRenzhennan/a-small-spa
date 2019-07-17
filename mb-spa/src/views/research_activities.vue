@@ -1,24 +1,43 @@
 <!-- 研学活动 -->
 <template>
-  <div>research_activities</div>
+  <div>
+    <CardItem :data_arr="data" mode='research_activities'/>
+  </div>
 </template>
 
 <script>
+import CardItem from "@/components/card_item";
 export default {
-  data () {
+  data() {
     return {
+      data: [
+        {
+          title: "07月13 - 07月14",
+          type: 1,
+          src: require("../assets/item2.png")
+        },
+        {
+          title: "07月13 - 07月14",
+          type: 1,
+          src: require("../assets/item2.png")
+        },
+        {
+          title: "07月13 - 07月14",
+          type: 2,
+          src: require("../assets/item2.png")
+        },
+      ]
     };
   },
 
-  components: {},
+  components: {
+    CardItem
+  },
 
   computed: {},
 
-//   mounted: {},
-
   methods: {}
-}
-
+};
 </script>
 <style lang='scss' scoped>
 </style>

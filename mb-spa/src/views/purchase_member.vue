@@ -1,12 +1,13 @@
 <!-- 购买会员 -->
 <template>
-  <div>purchase_member</div>
+  <div class="purchase_member" v-html="html_data"></div>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
+      html_data: ""
     };
   },
 
@@ -14,11 +15,25 @@ export default {
 
   computed: {},
 
-//   mounted: {},
-
-  methods: {}
-}
-
+  mounted() {
+    this.html_data = `<p>
+      <img src="/img/buy_work.fa1e66d7.png" alt="图片加载失败" />
+    </p>`;
+  }
+};
 </script>
 <style lang='scss' scoped>
+.purchase_member {
+  width: 100%;
+
+  p {
+    img {
+      width: 100%;
+    }
+  }
+}
+.purchase_member /deep/ img{
+  width: 100%;
+  display:block;
+}
 </style>

@@ -33,6 +33,10 @@ export default {
   width: 100%;
   height: 90px;
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
   a {
     font-size: 30px;
     font-weight: bold;
