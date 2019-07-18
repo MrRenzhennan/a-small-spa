@@ -14,6 +14,8 @@ const ForgetPassword = () => import('./views/forget-password.vue');//忘记密�
 
 //我的
 const MyHome = () => import('./views/my-home.vue');//我的
+
+const Setting = () => import('./views/setting.vue');//设置
 Vue.use(Router)
 
 export default new Router({
@@ -72,6 +74,11 @@ export default new Router({
       path: '/my-home',
       name: 'my-home',
       component: MyHome,
+    },
+    {
+      path: '/setting',
+      name: 'setting',
+      component: Setting,
     },
   ]
 })
