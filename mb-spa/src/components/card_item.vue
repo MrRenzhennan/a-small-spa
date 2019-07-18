@@ -53,35 +53,35 @@ export default {
 
 <style lang='scss' scoped>
 .card-item {
-  width: 680px;
-  height: 400px;
+  width: 340px;
+  height: 200px;
   margin: 0 auto;
-  margin-bottom: 30px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 7.5px;
   position: relative;
   .image-box {
     width: 100%;
-    height: 320px;
+    height: 160px;
     background-size: 100% 100%;
   }
   .btm-operation {
     width: 100%;
     box-sizing: border-box;
-    padding: 0 35px;
-    height: calc(100% - 320px);
+    padding: 0 17.5px;
+    height: calc(100% - 160px);
     display: flex;
     align-items: center;
     justify-content: space-between;
     .title {
-      font-size: 25px;
-      letter-spacing: 2px;
+      font-size: 12.5px;
+      letter-spacing: 1px;
       color: #333;
       font-weight: 600;
     }
     .operation {
-      width: 100px;
-      height: 40px;
+      width: 50px;
+      height: 20px;
       background-size: 100% 100%;
       &.sign_up_btn {
         background-image: url(../assets/sign_up_btn.png);
@@ -98,8 +98,8 @@ export default {
     }
   }
   .sign {
-    width: 137px;
-    height: 138px;
+    width: 68.5px;
+    height: 69px;
     background-size: 100% 100%;
     position: absolute;
     top: 0px;

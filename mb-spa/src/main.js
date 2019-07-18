@@ -5,7 +5,7 @@ import store from './store'
 import 'amfe-flexible/index.js'
 Vue.config.productionTip = false
 
-import { NavBar, Image, Field, CellGroup, Button, Divider, Checkbox, CheckboxGroup } from 'vant';
+import { NavBar, Image, Field, CellGroup, Button, Divider, Checkbox, CheckboxGroup,Dialog,Toast   } from 'vant';
 Vue
   .use(NavBar)
   .use(Image)
@@ -14,7 +14,9 @@ Vue
   .use(Button)
   .use(Divider)
   .use(Checkbox)
-  .use(CheckboxGroup);
+  .use(CheckboxGroup)
+  .use(Dialog)
+  .use(Toast)
 
 new Vue({
   router,

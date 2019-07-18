@@ -82,19 +82,19 @@ export default {
   display: flex;
   justify-content: center;
   .img-box {
-    margin-top: 130px;
+    margin-top: 65px;
   }
 }
 .formgroup {
   width: 100%;
   box-sizing: border-box;
-  padding: 0 60px;
-  margin-top: 120px;
+  padding: 0 30px;
+  margin-top: 60px;
   .input-item.ignore {
     border-bottom: 1px solid #ccc;
-    margin-top: 20px;
+    margin-top: 10px;
     /deep/ .van-cell {
-      padding: 0px 5px;
+      padding: 0px 6px;
       height: 40px;
       display: flex;
       align-items: center;
@@ -104,7 +104,7 @@ export default {
     }
     /deep/ .van-cell__title.van-field__label {
       font-weight: 200;
-      margin-left: 5px;
+      margin-left: 6px;
     }
     /deep/ input {
       font-size: 16px;
@@ -114,11 +114,11 @@ export default {
     }
   }
   .forget-password {
-    font-size: 18px;
+    font-size: 9px;
     color: #5d5c5c;
     letter-spacing: 1px;
-    margin-top: 5px;
-    margin-bottom: 100px;
+    margin-top: 2px;
+    margin-bottom: 50px;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -137,9 +137,9 @@ export default {
     flex-direction: column;
     align-items: center;
     .weixin {
-      font-size: 30px;
+      font-size: 15px;
       color: #5d5c5c;
-      margin-top: 10px;
+      margin-top: 5px;
     }
   }
 }

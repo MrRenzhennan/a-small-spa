@@ -29,7 +29,7 @@
           label-width="20px"
         />
       </div>
-      <van-button type="info">登陆</van-button>
+      <van-button type="info" @click="login">登陆</van-button>
       <div class="forget-password">
         <span @click="ForgetPassword">忘记密码？</span>
         <span @click="CodeLogin">验证码登陆</span>
@@ -66,31 +66,53 @@ export default {
     onClickRight() {
       this.$router.push("/registered");
     },
-    ForgetPassword(){
+    login() {
+      if (this.phone && this.phone != '123') {
+        this.$dialog
+          .confirm({
+            title: "注册提示",
+            message: "您输入的手机号未注册",
+            confirmButtonText: "去注册"
+          })
+          .then(() => {
+            this.$router.push("/registered");
+          })
+          .catch(() => {
+            // on cancel
+          });
+      } else if(this.phone){
+        this.$store.dispatch('changeName',this.phone);
+        this.$router.push("/");
+      }else{
+        this.$toast("账号或密码错误，请重新输入");
+      }
+    },
+    ForgetPassword() {
       this.$router.push("/forget_password");
     },
-    CodeLogin(){
+    CodeLogin() {
       this.$router.push("/code-login");
     }
   }
 };
 </script>
+
 <style lang='scss' scoped>
 .login {
   display: flex;
   justify-content: center;
   .img-box {
-    margin-top: 130px;
+    margin-top: 65px;
   }
 }
 .formgroup {
   width: 100%;
   box-sizing: border-box;
-  padding: 0 60px;
-  margin-top: 120px;
+  padding: 0 30px;
+  margin-top: 60px;
   .input-item.ignore {
     border-bottom: 1px solid #ccc;
-    margin-top: 20px;
+    margin-top: 10px;
     /deep/ .van-cell {
       padding: 0px 5px;
       height: 40px;
@@ -109,11 +131,11 @@ export default {
     }
   }
   .forget-password {
-    font-size: 18px;
+    font-size: 10px;
     color: #5d5c5c;
     letter-spacing: 1px;
-    margin-top: 5px;
-    margin-bottom: 100px;
+    margin-top: 2px;
+    margin-bottom: 50px;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -132,9 +154,9 @@ export default {
     flex-direction: column;
     align-items: center;
     .weixin {
-      font-size: 30px;
+      font-size: 15px;
       color: #5d5c5c;
-      margin-top: 10px;
+      margin-top: 5px;
     }
   }
 }

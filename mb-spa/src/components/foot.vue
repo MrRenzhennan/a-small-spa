@@ -24,34 +24,34 @@ export default {
 <style lang='scss' scoped>
 .foot {
   width: 100%;
-  height: 130px;
+  height: 65px;
   background: #fdcd0e;
   box-sizing: border-box;
-  padding: 0 30px;
+  padding: 0 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   .text {
-    font-size: 35px;
+    font-size: 17.5px;
     font-weight: 600;
     color: #000;
-    margin-left: 30px;
+    margin-left: 15px;
     span {
-      font-size: 40px;
+      font-size: 20px;
       font-weight: 700;
     }
   }
   ._btn{
-      width: 315px;
-      height: 90px;
-      border-radius: 90px;
+      width: 157.5px;
+      height: 45px;
+      border-radius: 45px;
       background: #f12d2c;
       color: #fff;
-      font-size: 45px;
+      font-size: 22.5px;
       text-align: center;
-      line-height: 90px;
-      letter-spacing: 4px;
+      line-height: 45px;
+      letter-spacing: 2px;
   }
 }
 </style>

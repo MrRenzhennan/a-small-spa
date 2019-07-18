@@ -25,7 +25,7 @@
       <div class="input-item ignore">
         <van-field v-model="againPwd" placeholder="设置6-24为密码" label="确认密码:" label-width="80px" />
       </div>
-      <van-button type="info">注册</van-button>
+      <van-button type="info" @click="registered">注册</van-button>
       <div class="operating-btm">
         <p class="t1" @click="onClickRight">已有账号,<span>直接登陆</span></p>
         <p class="t2">
@@ -39,6 +39,7 @@
 <script>
 import NavBar from "@/components/nav-bar.vue";
 export default {
+  name:'registered',
   data() {
     return {
       phone: "",
@@ -56,6 +57,20 @@ export default {
   methods: {
     onClickRight() {
       this.$router.push("/login");
+    },
+    registered(){
+      if(this.phone){
+        this.$dialog.confirm({
+          title: '提示',
+          message: '此手机号已注册，请直接登录',
+          confirmButtonText:'去登录',
+          showCancelButton:false,
+        }).then(() => {
+          this.$router.push("/login");
+        }).catch(() => {
+          // on cancel
+        });
+      }
     }
   }
 };
@@ -65,17 +80,17 @@ export default {
   display: flex;
   justify-content: center;
   .img-box {
-    margin-top: 130px;
+    margin-top: 65px;
   }
 }
 .formgroup {
   width: 100%;
   box-sizing: border-box;
-  padding: 0 60px;
-  margin-top: 120px;
+  padding: 0 30px;
+  margin-top: 60px;
   .input-item.ignore {
     border-bottom: 1px solid #ccc;
-    margin-top: 20px;
+    margin-top: 10px;
     /deep/ .van-cell {
       padding: 0px 5px;
       height: 40px;
@@ -106,17 +121,17 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 16px;
-    letter-spacing: 2px;
+    font-size: 8px;
+    letter-spacing: 1px;
     font-weight: 600;
     .t1{
       span{
         color: #00a0e9;
-        margin-left: 5px;
+        margin-left: 3px;
       }
     }
     .t2{
-      margin-top: 30px;
+      margin-top: 15px;
     }
     /deep/ .van-checkbox__icon{
       font-size: 16px;

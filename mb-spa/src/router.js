@@ -12,6 +12,8 @@ const CodeLogin = () => import('./views/code-login.vue');//验证码登陆
 const Registered = () => import('./views/registered.vue');//注册
 const ForgetPassword = () => import('./views/forget-password.vue');//忘记密码
 
+//我的
+const MyHome = () => import('./views/my-home.vue');//我的
 Vue.use(Router)
 
 export default new Router({
@@ -65,6 +67,11 @@ export default new Router({
       path: '/forget_password',
       name: 'forget_password',
       component: ForgetPassword,
+    },
+    {
+      path: '/my-home',
+      name: 'my-home',
+      component: MyHome,
     },
   ]
 })

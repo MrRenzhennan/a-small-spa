@@ -31,14 +31,14 @@ export default {
 <style lang='scss' scoped>
 .tab-bar {
   width: 100%;
-  height: 90px;
+  height: 45px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   box-sizing: border-box;
   a {
-    font-size: 30px;
+    font-size: 15px;
     font-weight: bold;
     color: #2c3e50;
     &.router-link-exact-active {

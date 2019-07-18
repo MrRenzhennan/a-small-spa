@@ -58,17 +58,17 @@ export default {
   display: flex;
   justify-content: center;
   .img-box {
-    margin-top: 130px;
+    margin-top: 65px;
   }
 }
 .formgroup {
   width: 100%;
   box-sizing: border-box;
-  padding: 0 60px;
-  margin-top: 120px;
+  padding: 0 30px;
+  margin-top: 60px;
   .input-item.ignore {
     border-bottom: 1px solid #ccc;
-    margin-top: 20px;
+    margin-top: 10px;
     /deep/ .van-cell {
       padding: 0px 5px;
       height: 40px;
