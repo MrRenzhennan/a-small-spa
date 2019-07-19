@@ -1,13 +1,16 @@
 <template>
+<div class="foot-box">
   <div class="foot">
     <p class="text">
       超级会员
       <span>999</span>元/年
     </p>
-    <p class="_btn">
+    <p class="_btn" @click="MemberPurchaseInformation">
         立即购买
     </p>
   </div>
+</div>
+
 </template>
 
 <script>
@@ -17,11 +20,20 @@ export default {
   data() {
     return {};
   },
-  methods: {}
+  methods: {
+    MemberPurchaseInformation(){
+      this.$router.push('/member-purchase-information')
+    }
+  }
 };
 </script>
 
 <style lang='scss' scoped>
+.foot-box{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 .foot {
   width: 100%;
   height: 65px;

@@ -11,12 +11,7 @@
       <div class="input-item ignore">
         <van-field v-model="name" placeholder="名字" label="联系人">
           <span slot="button">
-            <van-image
-              class="img-box"
-              :width="42 / 2"
-              :height="41 / 2"
-              :src="require('../assets/name.jpg')"
-            />
+            <van-image class="img-box-name" :src="require('../assets/name.jpg')" />
           </span>
         </van-field>
       </div>
@@ -26,12 +21,7 @@
       <div class="input-item ignore" @click="GetArea">
         <van-field v-model="address" placeholder="地区信息" label="选择地区">
           <span slot="button">
-            <van-image
-              class="img-box"
-              :width="35 / 2"
-              :height="43 / 2"
-              :src="require('../assets/address.png')"
-            />
+            <van-image class="img-box-address" :src="require('../assets/address.png')" />
           </span>
         </van-field>
       </div>
@@ -108,6 +98,14 @@ export default {
     }
     /deep/ input {
       font-size: 16px;
+    }
+    .img-box-name {
+      width: 21px;
+      height: 21px;
+    }
+    .img-box-address {
+      width: 18px;
+      height: 22px;
     }
     /deep/ .van-field__button {
       color: #00a0e9;

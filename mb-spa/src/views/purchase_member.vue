@@ -30,7 +30,7 @@ export default {
 <style lang='scss' scoped>
 .purchase_member {
   width: 100%;
-
+  padding-bottom: 65px;
   p {
     img {
       width: 100%;

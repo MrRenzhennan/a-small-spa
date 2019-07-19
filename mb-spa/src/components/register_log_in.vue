@@ -2,7 +2,7 @@
 <template>
   <div>
     <div class="register_log_in">
-      <div class="button-box" v-if="!this.$store.state.name">
+      <div class="button-box" v-if="this.$store.state.name">
         <router-link to="/login">
           <span>登录</span>
         </router-link>
@@ -12,7 +12,8 @@
           <span>注册</span>
         </router-link>
       </div>
-      <div class="my-home" v-if="this.$store.state.name">
+      <div class="my-home" v-if="!this.$store.state.name">
+        <van-image class="mycode" :src="require('../assets/heard.png')" />
         <router-link to="/my-home">
           <span class="my">我的</span>
         </router-link>
@@ -57,18 +58,23 @@ export default {
     }
   }
   .my-home {
-    width: 50px;
+     width: 70px;
     height: 25px;
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background: rgba(255, 255, 255, 0.5);
-    border:1px solid #fff;
     color: #fff;
     border-radius: 5px;
+    .mycode{
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+    }
     a {
       font-size: 12px;
+      letter-spacing: 1px;
     }
   }
   a {

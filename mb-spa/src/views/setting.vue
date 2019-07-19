@@ -13,7 +13,7 @@
           </div>
           <div class slot="right">
             <div class="img-box">
-              <van-image width="35" height="35" :src="require('../assets/heard.png')" />
+              <van-image class="heard-img" :src="require('../assets/heard.png')" />
               <van-icon name="arrow" />
             </div>
           </div>
@@ -314,6 +314,10 @@ export default {
     height: 60px;
     line-height: 60px;
     font-size: 16px;
+    .heard-img{
+       width:35px;
+       height:35px;
+    }
     .img-box img {
       margin-top: 13px;
     }

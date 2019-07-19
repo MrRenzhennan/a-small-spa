@@ -6,7 +6,7 @@
     </div>
     <div class="my-bg">
       <div class="heard-logo">
-        <van-image width="61" height="61" :src="require('../assets/heard-logo.png')" />
+        <van-image class="heard-logo-img" :src="require('../assets/heard-logo.png')" />
         <p class>ID：xxx</p>
       </div>
       <div class="user-info">
@@ -19,7 +19,7 @@
       </div>
       <div class="setting">
         <router-link to="/setting">
-          <van-image width="20" height="20" :src="require('../assets/setting.png')" />
+          <van-image class="setting-img" :src="require('../assets/setting.png')" />
         </router-link>
       </div>
     </div>
@@ -27,7 +27,7 @@
       <div class="main-box">
         <van-nav-bar>
           <div class="bar-left" slot="left">
-            <van-image width="13" height="13" :src="require('../assets/my-icon-1.png')" />
+            <van-image class="bar-left-img" :src="require('../assets/my-icon-1.png')" />
             <span class="item-title">我的收益</span>
           </div>
           <div class="bar-right" slot="right">
@@ -61,7 +61,7 @@
       <div class="main-box">
         <van-nav-bar>
           <div class="bar-left" slot="left">
-            <van-image width="13" height="13" :src="require('../assets/my-icon-2.png')" />
+            <van-image class="bar-left-img" :src="require('../assets/my-icon-2.png')" />
             <span class="item-title">我的推荐</span>
           </div>
           <div class="bar-right" slot="right">
@@ -76,12 +76,12 @@
             </p>
             <p class="b">总计</p>
           </div>
-          <div class="item">
-            <van-image width="30" height="30" :src="require('../assets/my-link.png')" />
+          <div class="item" @click="GoMyLink">
+            <van-image class="my-link-img" :src="require('../assets/my-link.png')" />
             <p class="b">推荐链接</p>
           </div>
-          <div class="item">
-            <van-image width="27" height="27" :src="require('../assets/my-code.png')" />
+          <div class="item" @click="GoMyCode">
+            <van-image class="my-code-img" :src="require('../assets/my-code.png')" />
             <p class="b">专属二维码</p>
           </div>
         </div>
@@ -89,7 +89,7 @@
       <div class="main-box">
         <van-nav-bar>
           <div class="bar-left" slot="left">
-            <van-image width="13" height="13" :src="require('../assets/my-icon-3.png')" />
+            <van-image class="bar-left-img" :src="require('../assets/my-icon-3.png')" />
             <span class="item-title">我的活动</span>
           </div>
           <div class="bar-right" slot="right">
@@ -116,7 +116,7 @@
       <div class="main-box">
         <van-nav-bar>
           <div class="bar-left" slot="left">
-            <van-image width="13" height="13" :src="require('../assets/my-icon-4.png')" />
+            <van-image class="bar-left-img" :src="require('../assets/my-icon-4.png')" />
             <span class="item-title">我的授课</span>
           </div>
           <div class="bar-right" slot="right">
@@ -164,6 +164,14 @@ export default {
   methods: {
     goLogin() {
       this.$router.push("/login");
+    },
+    //跳转推荐链接
+    GoMyLink(){
+      this.$router.push("/my-link");
+    },
+    //跳转专属二维码
+    GoMyCode(){
+      this.$router.push("/my-code");
     }
   }
 };
@@ -186,6 +194,10 @@ export default {
   color: #fff;
   .heard-logo {
     margin-right: 20px;
+    .heard-logo-img{
+      width:61px;
+      height:61px; 
+    }
     p {
       font-size: 14px;
       text-align: center;
@@ -212,6 +224,13 @@ export default {
       margin-bottom: 5px;
     }
   }
+  .setting{
+    .setting-img{
+       width:20px;
+       height:20px;
+    }
+  }
+  
 }
 .my-main {
   width: 100%;
@@ -234,6 +253,10 @@ export default {
         letter-spacing: 1px;
         font-weight: 600;
         color: #333;
+      }
+      .bar-left-img{
+         width:13px;
+         height:13px;
       }
     }
     .bar-right {
@@ -260,6 +283,14 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
+        .my-link-img{
+           width:30px;
+           height:30px;
+        }
+        .my-code-img{
+           width:27px;
+           height:27px;
+        }
         .t {
           font-size: 20px;
           margin-top: 15px;

@@ -5,8 +5,6 @@
     <div class="login">
       <van-image
         class="img-box"
-        :width="393 / 2"
-        :height="128 / 2"
         :src="require('../assets/login_logo.png')"
       />
     </div>
@@ -57,8 +55,10 @@ export default {
 .login {
   display: flex;
   justify-content: center;
-  .img-box {
+  /deep/ .img-box {
     margin-top: 65px;
+    width: 196px;
+    height: 64px;
   }
 }
 .formgroup {

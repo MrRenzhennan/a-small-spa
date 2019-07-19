@@ -3,12 +3,7 @@
   <div>
     <NavBar title="登录" right_text="注册" @onClickRight="onClickRight" />
     <div class="login">
-      <van-image
-        class="img-box"
-        :width="393 / 2"
-        :height="128 / 2"
-        :src="require('../assets/login_logo.png')"
-      />
+      <van-image class="img-box" :src="require('../assets/login_logo.png')" />
     </div>
     <div class="formgroup">
       <div class="input-item ignore">
@@ -38,12 +33,7 @@
       </div>
       <van-divider>其他方式登陆</van-divider>
       <div class="wixi_icon">
-        <van-image
-          class="wixi_icon"
-          :width="79 / 2"
-          :height="79 / 2"
-          :src="require('../assets/wixi_icon.png')"
-        />
+        <van-image class="wixi_icon-img" :src="require('../assets/wixi_icon.png')" />
         <p class="weixin">微信</p>
       </div>
     </div>
@@ -81,8 +71,10 @@ export default {
 .login {
   display: flex;
   justify-content: center;
-  .img-box {
+  /deep/ .img-box {
     margin-top: 65px;
+    width: 196px;
+    height: 64px;
   }
 }
 .formgroup {
@@ -136,6 +128,10 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /deep/ .wixi_icon-img {
+      width: 40px;
+      height: 40px;
+    }
     .weixin {
       font-size: 15px;
       color: #5d5c5c;

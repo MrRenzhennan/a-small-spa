@@ -22,7 +22,9 @@ import {
   DatetimePicker,
   RadioGroup,
   Radio,
-  Area 
+  Area,
+  Tab, 
+  Tabs 
 } from "vant";
 Vue.use(NavBar)
   .use(Image)
@@ -40,7 +42,10 @@ Vue.use(NavBar)
   .use(DatetimePicker)
   .use(RadioGroup)
   .use(Radio)
-  .use(Area);
+  .use(Area)
+  .use(Tab)
+  .use(Tabs)
+;
 
 new Vue({
   router,
