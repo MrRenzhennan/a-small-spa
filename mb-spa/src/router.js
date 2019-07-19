@@ -12,10 +12,14 @@ const CodeLogin = () => import('./views/code-login.vue');//验证码登陆
 const Registered = () => import('./views/registered.vue');//注册
 const ForgetPassword = () => import('./views/forget-password.vue');//忘记密码
 
-//我的
+
 const MyHome = () => import('./views/my-home.vue');//我的
 
 const Setting = () => import('./views/setting.vue');//设置
+
+const AddressMy = () => import('./views/address-my.vue');//我的地址
+const AddressSetting = () => import('./views/address-setting.vue');//设置地址
+const ServiceAgreement = () => import('./views/service-agreement.vue');//服务协议
 Vue.use(Router)
 
 export default new Router({
@@ -79,6 +83,21 @@ export default new Router({
       path: '/setting',
       name: 'setting',
       component: Setting,
+    },
+    {
+      path: '/address-my',
+      name: 'address-my',
+      component: AddressMy,
+    },
+    {
+      path: '/address-setting',
+      name: 'address-setting',
+      component: AddressSetting,
+    },
+    {
+      path: '/service-agreement',
+      name: 'service-agreement',
+      component: ServiceAgreement,
     },
   ]
 })

@@ -1,6 +1,6 @@
 <!-- 注册 -->
 <template>
-  <div>
+  <div class="">
     <NavBar title="注册" />
     <div class="login">
       <van-image
@@ -12,18 +12,18 @@
     </div>
     <div class="formgroup">
       <div class="input-item ignore">
-        <van-field v-model="phone" placeholder="请输入手机号码" label="手机号码:" label-width="80px" />
+        <van-field v-model="phone" placeholder="请输入手机号码" label="手机号码:"/>
       </div>
       <div class="input-item ignore">
-        <van-field v-model="code" placeholder="输入验证啊" label="验证码:" label-width="80px">
+        <van-field v-model="code" placeholder="输入验证啊" label="验证码:">
           <span slot="button">获取验证码</span>
         </van-field>
       </div>
       <div class="input-item ignore">
-        <van-field v-model="pwd" placeholder="设置6-24为密码" label="设置密码:" label-width="80px" />
+        <van-field v-model="pwd" placeholder="设置6-24为密码" label="设置密码:" />
       </div>
       <div class="input-item ignore">
-        <van-field v-model="againPwd" placeholder="设置6-24为密码" label="确认密码:" label-width="80px" />
+        <van-field v-model="againPwd" placeholder="设置6-24为密码" label="确认密码:"/>
       </div>
       <van-button type="info" @click="registered">注册</van-button>
       <div class="operating-btm">
@@ -96,6 +96,9 @@ export default {
       height: 40px;
       display: flex;
       align-items: center;
+      /deep/ .van-cell__title{
+        width: 90px;
+      }
     }
     /deep/ .van-cell__title.van-field__label {
       font-weight: 600;
@@ -121,7 +124,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 8px;
+    font-size: 12px;
     letter-spacing: 1px;
     font-weight: 600;
     .t1{
@@ -135,6 +138,9 @@ export default {
     }
     /deep/ .van-checkbox__icon{
       font-size: 16px;
+    }
+    /deep/ .van-checkbox__label{
+      font-size: 10px;
     }
   }
 }

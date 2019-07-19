@@ -114,7 +114,7 @@ export default {
     }
   }
   .forget-password {
-    font-size: 9px;
+    font-size: 12px;
     color: #5d5c5c;
     letter-spacing: 1px;
     margin-top: 2px;
