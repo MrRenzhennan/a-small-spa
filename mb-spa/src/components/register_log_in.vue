@@ -53,7 +53,7 @@ export default {
     box-sizing: border-box;
     padding: 0 5px;
     span {
-      font-size: 6px;
+      font-size: 12px;
     }
   }
   .my-home {
@@ -68,7 +68,7 @@ export default {
     color: #fff;
     border-radius: 5px;
     a {
-      font-size: 8px;
+      font-size: 12px;
     }
   }
   a {
