@@ -1,30 +1,32 @@
 <template>
   <div>
     <div class="card-item" v-for="(item,index) in itemArray" :key="index">
-      <div class="image-box" v-bind:style="{'background-image':'url('+item.src+')'}"></div>
-      <div class="btm-operation">
-        <p class="title">{{item.title}}</p>
-        <p
-          class="operation"
+      <router-link :to="item.link">
+        <div class="image-box" v-bind:style="{'background-image':'url('+item.src+')'}"></div>
+        <div class="btm-operation">
+          <p class="title">{{item.title}}</p>
+          <p
+            class="operation"
+            v-if="mode == 'member_appointment'"
+            :class="item.type == 1 ? 'sign_up_btn' : 'sign_down_btn'"
+          ></p>
+          <p
+            class="operation"
+            v-if="mode == 'research_activities'"
+            :class="item.type == 1 ? 'schedule_classes_up_btn' : 'schedule_classes_down_btn'"
+          ></p>
+        </div>
+        <div
+          class="sign"
           v-if="mode == 'member_appointment'"
-          :class="item.type == 1 ? 'sign_up_btn' : 'sign_down_btn'"
-        ></p>
-        <p
-          class="operation"
+          :class="item.type == 1 ? 'sign_up_logo' : 'sign_down_logo'"
+        ></div>
+        <div
+          class="sign"
           v-if="mode == 'research_activities'"
-          :class="item.type == 1 ? 'schedule_classes_up_btn' : 'schedule_classes_down_btn'"
-        ></p>
-      </div>
-      <div
-        class="sign"
-        v-if="mode == 'member_appointment'"
-        :class="item.type == 1 ? 'sign_up_logo' : 'sign_down_logo'"
-      ></div>
-      <div
-        class="sign"
-        v-if="mode == 'research_activities'"
-        :class="item.type == 1 ? 'schedule_classes_up_logo' : 'schedule_classes_down_logo'"
-      ></div>
+          :class="item.type == 1 ? 'schedule_classes_up_logo' : 'schedule_classes_down_logo'"
+        ></div>
+      </router-link>
     </div>
   </div>
 </template>

@@ -20,6 +20,12 @@ const MyIncome = () => import('./views/my-income.vue');//我的收益
 const MyLink = () => import('./views/my-link.vue');//我的专属链接
 const MyCode = () => import('./views/my-code.vue');//我的专属二维码
 
+const BankList = () => import('./views/bank-list.vue');//银行卡
+const BankBind = () => import('./views/bank-bind.vue');//银行卡绑定
+
+const BalanceWithdrawal = () => import('./views/balance-withdrawal.vue');//余额提现
+const BalanceWithdrawalSuccess = () => import('./views/balance-withdrawal-success.vue');//提现成功
+
 const AddressMy = () => import('./views/address-my.vue');//我的地址
 const AddressSetting = () => import('./views/address-setting.vue');//设置地址
 const ServiceAgreement = () => import('./views/service-agreement.vue');//服务协议
@@ -93,6 +99,26 @@ export default new Router({
       path: '/my-code',
       name: 'my-code',
       component: MyCode,
+    },
+    {
+      path: '/bank-list',
+      name: 'bank-list',
+      component: BankList,
+    },
+    {
+      path: '/bank-bind',
+      name: 'bank-bind',
+      component: BankBind,
+    },
+    {
+      path: '/balance-withdrawal',
+      name: 'balance-withdrawal',
+      component: BalanceWithdrawal,
+    },
+    {
+      path: '/balance-withdrawal-success',
+      name: 'balance-withdrawal-success',
+      component: BalanceWithdrawalSuccess,
     },
     {
       path: '/address-my',

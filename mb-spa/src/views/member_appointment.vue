@@ -1,6 +1,6 @@
 <!-- 会员约课 -->
 <template>
-  <div>
+  <div class="member_appointment">
     <CardItem :data_arr="data"  mode='member_appointment'/>
   </div>
 </template>
@@ -14,17 +14,20 @@ export default {
         {
           title: "中科院演戏时间",
           type: 1,
-          src: require("../assets/item1.png")
+          src: require("../assets/item1.png"),
+          link:'/appointment-course'
         },
         {
           title: "魔术游学营",
           type: 1,
-          src: require("../assets/item1.png")
+          src: require("../assets/item1.png"),
+          link:'/appointment-course'
         },
         {
           title: "魔术游学营",
           type: 2,
-          src: require("../assets/item1.png")
+          src: require("../assets/item1.png"),
+          link:'/'
         },
       ]
     };
@@ -40,4 +43,7 @@ export default {
 };
 </script>
 <style lang='scss' scoped>
+.member_appointment{
+padding-bottom: 65px;
+}
 </style>
