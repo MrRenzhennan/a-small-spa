@@ -30,7 +30,7 @@
             <van-image class="bar-left-img" :src="require('../assets/my-icon-1.png')" />
             <span class="item-title">我的收益</span>
           </div>
-          <div class="bar-right" slot="right">
+          <div class="bar-right" slot="right"  @click="MyIncome">
             <van-icon name="arrow" />
           </div>
         </van-nav-bar>
@@ -164,6 +164,10 @@ export default {
   methods: {
     goLogin() {
       this.$router.push("/login");
+    },
+    //跳转我的收益
+    MyIncome(){
+      this.$router.push("/my-income");
     },
     //跳转推荐链接
     GoMyLink(){

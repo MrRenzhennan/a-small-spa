@@ -2,7 +2,7 @@
 <template>
   <div>
     <div class="register_log_in">
-      <div class="button-box" v-if="this.$store.state.name">
+      <div class="button-box" v-if="!this.$store.state.name">
         <router-link to="/login">
           <span>登录</span>
         </router-link>
@@ -12,7 +12,7 @@
           <span>注册</span>
         </router-link>
       </div>
-      <div class="my-home" v-if="!this.$store.state.name">
+      <div class="my-home" v-if="this.$store.state.name">
         <van-image class="mycode" :src="require('../assets/heard.png')" />
         <router-link to="/my-home">
           <span class="my">我的</span>

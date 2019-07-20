@@ -16,6 +16,7 @@ const ForgetPassword = () => import('./views/forget-password.vue');//忘记密�
 const MyHome = () => import('./views/my-home.vue');//我的
 const Setting = () => import('./views/setting.vue');//设置
 
+const MyIncome = () => import('./views/my-income.vue');//我的收益
 const MyLink = () => import('./views/my-link.vue');//我的专属链接
 const MyCode = () => import('./views/my-code.vue');//我的专属二维码
 
@@ -77,6 +78,11 @@ export default new Router({
       path: '/setting',
       name: 'setting',
       component: Setting,
+    },
+    {
+      path: '/my-income',
+      name: 'my-income',
+      component: MyIncome,
     },
     {
       path: '/my-link',

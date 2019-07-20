@@ -24,7 +24,9 @@ import {
   Radio,
   Area,
   Tab, 
-  Tabs 
+  Tabs,
+  Collapse, 
+  CollapseItem 
 } from "vant";
 Vue.use(NavBar)
   .use(Image)
@@ -45,6 +47,8 @@ Vue.use(NavBar)
   .use(Area)
   .use(Tab)
   .use(Tabs)
+  .use(Collapse)
+  .use(CollapseItem)
 ;
 
 new Vue({
