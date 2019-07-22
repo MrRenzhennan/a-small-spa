@@ -2,35 +2,15 @@
 <template>
   <div class="tab-bar">
     <van-tabs v-model="active">
-      <van-tab title="购买会员" :class="active == 0 ? 'd44' : ''">
-        <div class="center">
-          <PurchaseMember />
-        </div>
-      </van-tab>
-      <van-tab title="会员约课">
-        <div class="center">
-          <MemberAppointment />
-        </div>
-      </van-tab>
-      <van-tab title="研学活动">
-        <div class="center">
-          <ResearchActivities />
-        </div>
-      </van-tab>
-      <van-tab title="本地新闻">
-        <div class="center">
-          <LocalNews />
-        </div>
-      </van-tab>
+      <van-tab title="购买会员" :class="active == 0 ? 'd44' : ''"></van-tab>
+      <van-tab title="会员约课"></van-tab>
+      <van-tab title="研学活动"></van-tab>
+      <van-tab title="本地新闻"></van-tab>
     </van-tabs>
   </div>
 </template>
 
 <script>
-import PurchaseMember from "@/views/purchase_member.vue";
-const MemberAppointment = () => import("@/views/member_appointment.vue");
-const ResearchActivities = () => import("@/views/research_activities.vue");
-const LocalNews = () => import("@/views/local_news.vue");
 export default {
   name: "tab-bar",
   data() {
@@ -38,17 +18,46 @@ export default {
       active: 0
     };
   },
+  mounted() {
+    console.log(this.$router.currentRoute.path);
+    switch (this.$router.currentRoute.path) {
+      case "/purchase_member":
+        this.active = 0;
+        break;
+      case "/member_appointment":
+        this.active = 1;
+        break;
+      case "/research_activities":
+        this.active = 2;
+        break;
+      case "/local_news":
+        this.active = 3;
+        break;
 
-  components: {
-    PurchaseMember,
-    MemberAppointment,
-    ResearchActivities,
-    LocalNews
+      default:
+        break;
+    }
   },
-
-  computed: {},
-
-  methods: {}
+  watch: {
+    active: function(n) {
+      switch (n) {
+        case 0:
+          this.$router.push("/purchase_member");
+          break;
+        case 1:
+          this.$router.push("/member_appointment");
+          break;
+        case 2:
+          this.$router.push("/research_activities");
+          break;
+        case 3:
+          this.$router.push("/local_news");
+          break;
+        default:
+          break;
+      }
+    }
+  }
 };
 </script>
 <style lang='scss' scoped>
@@ -58,8 +67,8 @@ export default {
 /deep/ .van-tabs__wrap {
   // height: 40px;
 }
-.d44{
-  .van-ellipsis{
+.d44 {
+  .van-ellipsis {
     color: #f44;
   }
 }

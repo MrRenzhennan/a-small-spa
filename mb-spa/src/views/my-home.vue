@@ -5,23 +5,25 @@
       <NavBar title="我的" />
     </div>
     <div class="my-bg">
-      <div class="heard-logo">
-        <van-image class="heard-logo-img" :src="require('../assets/heard-logo.png')" />
-        <p class>ID：xxx</p>
+      <div class="tt">
+        <div class="heard-logo">
+          <van-image class="heard-logo-img" :src="require('../assets/heard-logo.png')" />
+          <p class>ID：xxx</p>
+        </div>
+        <div class="user-info">
+          <p class="user-name">
+            <span @click="goLogin">点击登录/注册</span>
+            <van-image width="33" height="13" :src="require('../assets/vip.png')" />
+          </p>
+          <p class="time">注册时间：2019-06-06</p>
+        </div>
+        <div class="setting">
+          <router-link to="/setting">
+            <van-image class="setting-img" :src="require('../assets/setting.png')" />
+          </router-link>
+        </div>
       </div>
-      <div class="user-info">
-        <p class="user-name">
-          <span @click="goLogin">点击登录/注册</span>
-          <van-image width="33" height="13" :src="require('../assets/vip.png')" />
-        </p>
-        <p class="time">注册时间：2019-06-06</p>
-        <p class="time">会员有效期时间：2019-06-06</p>
-      </div>
-      <div class="setting">
-        <router-link to="/setting">
-          <van-image class="setting-img" :src="require('../assets/setting.png')" />
-        </router-link>
-      </div>
+      <p class="time-r">会员有效期时间：2019年06月06日-2019年06月06日</p>
     </div>
     <div class="my-main">
       <div class="main-box">
@@ -30,7 +32,7 @@
             <van-image class="bar-left-img" :src="require('../assets/my-icon-1.png')" />
             <span class="item-title">我的收益</span>
           </div>
-          <div class="bar-right" slot="right"  @click="MyIncome">
+          <div class="bar-right" slot="right" @click="MyIncome">
             <van-icon name="arrow" />
           </div>
         </van-nav-bar>
@@ -166,15 +168,15 @@ export default {
       this.$router.push("/login");
     },
     //跳转我的收益
-    MyIncome(){
+    MyIncome() {
       this.$router.push("/my-income");
     },
     //跳转推荐链接
-    GoMyLink(){
+    GoMyLink() {
       this.$router.push("/my-link");
     },
     //跳转专属二维码
-    GoMyCode(){
+    GoMyCode() {
       this.$router.push("/my-code");
     }
   }
@@ -191,16 +193,19 @@ export default {
   height: 145px;
   background: url(../assets/mybg.png);
   background-size: 100% 100%;
-  display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
-  padding: 10px 20px 0px 20px;
-  color: #fff;
+  .tt {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 10px 20px 0px 20px;
+    color: #fff;
+  }
+
   .heard-logo {
     margin-right: 20px;
-    .heard-logo-img{
-      width:61px;
-      height:61px; 
+    .heard-logo-img {
+      width: 61px;
+      height: 61px;
     }
     p {
       font-size: 14px;
@@ -228,19 +233,25 @@ export default {
       margin-bottom: 5px;
     }
   }
-  .setting{
-    .setting-img{
-       width:20px;
-       height:20px;
+  .setting {
+    .setting-img {
+      width: 20px;
+      height: 20px;
     }
   }
-  
+  .time-r {
+    font-size: 12px;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+  }
 }
 .my-main {
   width: 100%;
   box-sizing: border-box;
   padding: 0 20px;
-  margin-top: -40px;
+  margin-top: -25px;
   .main-box {
     width: 100%;
     background: #fff;
@@ -258,9 +269,9 @@ export default {
         font-weight: 600;
         color: #333;
       }
-      .bar-left-img{
-         width:13px;
-         height:13px;
+      .bar-left-img {
+        width: 13px;
+        height: 13px;
       }
     }
     .bar-right {
@@ -287,13 +298,13 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
-        .my-link-img{
-           width:30px;
-           height:30px;
+        .my-link-img {
+          width: 30px;
+          height: 30px;
         }
-        .my-code-img{
-           width:27px;
-           height:27px;
+        .my-code-img {
+          width: 27px;
+          height: 27px;
         }
         .t {
           font-size: 20px;

@@ -1,14 +1,19 @@
 <!-- 购买会员 -->
 <template>
-  <!-- <div class="purchase_member" v-html="html_data"></div> -->
-  <div class="purchase_member">
+<div>
+  <div class="purchase_member" v-html="html_data"></div>
+  <Foot/>
+</div>
+
+  <!-- <div class="purchase_member">
     <p>
       <img src="../assets/buy_work.png" alt="图片加载失败" />
     </p>
-  </div>
+  </div> -->
 </template>
 
 <script>
+import Foot from "@/components/foot.vue";
 export default {
   data() {
     return {
@@ -16,7 +21,9 @@ export default {
     };
   },
 
-  components: {},
+  components: {
+    Foot
+  },
 
   computed: {},
 

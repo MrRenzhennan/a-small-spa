@@ -44,6 +44,5 @@ export default {
 </script>
 <style lang='scss' scoped>
 .member_appointment{
-padding-bottom: 65px;
 }
 </style>

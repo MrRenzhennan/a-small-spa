@@ -27,7 +27,8 @@
           <span>直接登陆</span>
         </p>
         <p class="t2">
-          <van-checkbox v-model="checked">同意《用户注册须知》</van-checkbox>
+          <van-checkbox v-model="checked"></van-checkbox>
+          <span @click="RegistrationProtocol">同意《用户注册须知》</span>
         </p>
       </div>
     </div>
@@ -55,6 +56,9 @@ export default {
   methods: {
     onClickRight() {
       this.$router.push("/login");
+    },
+    RegistrationProtocol(){
+      this.$router.push("/registration-protocol");
     },
     registered() {
       if (this.phone) {
@@ -138,12 +142,14 @@ export default {
     }
     .t2 {
       margin-top: 15px;
+      display: flex;
+      span{
+        margin-left: 5px;
+        font-size: 10px;
+      }
     }
     /deep/ .van-checkbox__icon {
       font-size: 16px;
-    }
-    /deep/ .van-checkbox__label {
-      font-size: 10px;
     }
   }
 }

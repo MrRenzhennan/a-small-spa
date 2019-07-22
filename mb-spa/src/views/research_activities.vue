@@ -44,6 +44,5 @@ export default {
 </script>
 <style lang='scss' scoped>
 .research_activities{
-  padding-bottom: 65px;
 }
 </style>

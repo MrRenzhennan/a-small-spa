@@ -89,12 +89,16 @@ export default {
         background-image: url(../assets/sign_up_btn.png);
       }
       &.sign_down_btn {
+        width: (176px / 2);
+        height: 25px;
         background-image: url(../assets/see_details.png);
       }
       &.schedule_classes_up_btn {
         background-image: url(../assets/schedule_classes_up_btn.png);
       }
       &.schedule_classes_down_btn {
+        width: (176px / 2);
+        height: 25px;
         background-image: url(../assets/see_details.png);
       }
     }

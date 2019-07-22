@@ -112,7 +112,7 @@
     </div>
     <div class="split"></div>
     <div class="list">
-      <div class="list-item">
+      <div class="list-item" @click="AboutUs">
         <van-nav-bar>
           <div class slot="left">
             <span class>关于我们</span>
@@ -135,6 +135,9 @@
             </div>
           </div>
         </van-nav-bar>
+      </div>
+      <div class="GoOut" @click="GoOut">
+        退出登陆
       </div>
     </div>
     <van-action-sheet
@@ -245,9 +248,16 @@ export default {
     GetCuteBaby() {
       this.GetCuteBabyshow = true;
     },
+    AboutUs(){
+      this.$router.push("/about-us");
+    },
     //服务协议
     ServiceAgreement(){
       this.$router.push('/service-agreement')
+    },
+    //退出登陆
+    GoOut(){
+
     }
   }
 };
@@ -328,5 +338,13 @@ export default {
       font-size: 18px;
     }
   }
+}
+.GoOut{
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  text-align: center;
+  line-height: 60px;
+  font-size: 16px;
 }
 </style>

@@ -10,7 +10,7 @@
         <van-field
           v-model="phone"
           placeholder="请输入手机号码"
-          left-icon="manager-o"
+          :left-icon="require('../assets/login-phone.png')"
           label="|"
           label-width="20px"
         />
@@ -19,7 +19,7 @@
         <van-field
           v-model="password"
           placeholder="请输入登陆密码"
-          left-icon="phone-o"
+          :left-icon="require('../assets/login-pwd.png')"
           label="|"
           label-width="20px"
         />

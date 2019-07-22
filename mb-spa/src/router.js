@@ -2,6 +2,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 
+import PurchaseMember from "@/views/purchase_member.vue";
+const MemberAppointment = () => import("@/views/member_appointment.vue");
+const ResearchActivities = () => import("@/views/research_activities.vue");
+const LocalNews = () => import("@/views/local_news.vue");
+
 const MemberPurchaseInformation = () => import('./views/member-purchase-information.vue');//会员购买信息
 const PurchaseSuccess = () => import('./views/purchase-success.vue');//购买成功
 
@@ -11,7 +16,8 @@ const Login = () => import('./views/login.vue');//密码登陆
 const CodeLogin = () => import('./views/code-login.vue');//验证码登陆
 const Registered = () => import('./views/registered.vue');//注册
 const ForgetPassword = () => import('./views/forget-password.vue');//忘记密码
-
+const RegistrationProtocol = () => import('./views/registration-protocol.vue');//注册协议
+const AboutUs = () => import('./views/about-us.vue');//关于我们
 
 const MyHome = () => import('./views/my-home.vue');//我的
 const Setting = () => import('./views/setting.vue');//设置
@@ -39,6 +45,29 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home,
+      redirect:'/purchase_member',
+      children:[
+        {
+          path: '/purchase_member',
+          name: 'purchase_member',
+          component: PurchaseMember,
+        },
+        {
+          path: '/member_appointment',
+          name: 'member_appointment',
+          component: MemberAppointment,
+        },
+        {
+          path: '/research_activities',
+          name: 'research_activities',
+          component: ResearchActivities,
+        },
+        {
+          path: '/local_news',
+          name: 'local_news',
+          component: LocalNews,
+        }
+      ]
     },
     {
       path: '/login',
@@ -74,6 +103,16 @@ export default new Router({
       path: '/forget_password',
       name: 'forget_password',
       component: ForgetPassword,
+    },
+    {
+      path: '/registration-protocol',
+      name: 'registration-protocol',
+      component: RegistrationProtocol,
+    },
+    {
+      path: '/about-us',
+      name: 'about-us',
+      component: AboutUs,
     },
     {
       path: '/my-home',

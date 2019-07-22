@@ -4,21 +4,19 @@
       <RegisterLogIn />
       <div class="swiper-title"></div>
       <TabBar />
-      <Foot />
+      <router-view />
     </div>
   </div>
 </template>
 
 <script>
 import TabBar from "@/components/tab_bar.vue";
-import Foot from "@/components/foot.vue";
 import RegisterLogIn from "@/components/register_log_in.vue";
 export default {
   name: "home",
   components: {
     RegisterLogIn,
     TabBar,
-    Foot
   }
 };
 </script>

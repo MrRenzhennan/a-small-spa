@@ -41,11 +41,11 @@
       </div>
 
       <div class="input-item ignore" @click="GetArea">
-        <van-field v-model="address" placeholder="请输入地区" label="地区"></van-field>
+        <van-field v-model="address" disabled placeholder="请输入地区" label="地区"></van-field>
       </div>
 
       <div class="input-item ignore">
-        <van-field v-model="addressAll" placeholder="详细地址,如街道、楼层、门牌号" label="详细地址" />
+        <van-field v-model="addressAll"  placeholder="详细地址,如街道、楼层、门牌号" label="详细地址" />
       </div>
 
       <div class="input-item ignore payment-amount">
