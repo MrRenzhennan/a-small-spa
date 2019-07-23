@@ -2,7 +2,25 @@
   <div>
     <div class="home">
       <RegisterLogIn />
-      <div class="swiper-title"></div>
+      <!-- <div class="swiper-title"></div> -->
+      <div class="swiper-box">
+        <van-swipe :autoplay="3000" indicator-color="white">
+           <van-swipe-item>
+             <van-image
+              width="100%"
+              class="swiper-title"
+              :src="require('../assets/swiper_bg.png')"
+            />
+           </van-swipe-item>
+            <van-swipe-item>
+              <van-image
+              width="100%"
+              class="swiper-title"
+              :src="require('../assets/swiper_bg.png')"
+            />
+            </van-swipe-item>
+        </van-swipe>
+      </div>
       <TabBar />
       <router-view />
     </div>
@@ -17,6 +35,14 @@ export default {
   components: {
     RegisterLogIn,
     TabBar,
+  },
+  data(){
+    return{
+      images: [
+        require('./../assets/swiper_bg.png'),
+        require('./../assets/swiper_bg.png'),
+      ]
+    }
   }
 };
 </script>
@@ -24,12 +50,13 @@ export default {
 .home {
   width: 100%;
   height: 200px;
+  .swiper-box{
+    box-shadow: 0 0px 7px rgba(68, 68, 68, 0.4);
+    margin-bottom: 8px;
+  }
   .swiper-title {
     width: 100%;
     height: 200px;
-    background: url(../assets/swiper_bg.png);
-    background-size: 100% 100%;
-    box-shadow: 0px 0px 5px rgba(153, 153, 153, 0.5);
   }
 }
 </style>

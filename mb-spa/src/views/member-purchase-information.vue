@@ -16,7 +16,7 @@
         <div class="label">学生性别</div>
         <div class="input-box">
           <label>
-            <input type="radio" v-model="gender" value="男" />
+            <input class="radio_type" type="radio" v-model="gender" value="男" />
             <span>小王子</span>
           </label>
           <label>
@@ -35,7 +35,7 @@
       </div>
 
       <div class="input-item ignore">
-        <van-field v-model="code" placeholder="输入验证啊" label="验证码:">
+        <van-field v-model="code" placeholder="输入验证" label="验证码:">
           <span slot="button">获取验证码</span>
         </van-field>
       </div>
@@ -45,7 +45,7 @@
       </div>
 
       <div class="input-item ignore">
-        <van-field v-model="addressAll"  placeholder="详细地址,如街道、楼层、门牌号" label="详细地址" />
+        <van-field v-model="addressAll" placeholder="详细地址,如街道、楼层、门牌号" label="详细地址" />
       </div>
 
       <div class="input-item ignore payment-amount">
@@ -118,8 +118,7 @@ export default {
     height: 40px;
     .label {
       font-size: 15px;
-      font-weight: 600;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
     }
     .input-box {
       display: flex;
@@ -127,6 +126,7 @@ export default {
     label {
       display: flex;
       align-items: center;
+      color: #212121;
     }
     input {
       width: 16px;
@@ -136,13 +136,57 @@ export default {
     span {
       font-size: 15px;
       margin-left: 5px;
-      color: #969799;
+      color: #212121;
     }
+    input:checked + span {
+      color: #21acec;
+    }
+    // .radio_type {
+    //   width: 16px;
+    //   height: 16px;
+    //   appearance: none;
+    //   position: relative;
+    // }
+    // .radio_type:before {
+    //   content: "";
+    //   width: 12px;
+    //   height: 12px;
+    //   border: 2px solid #21acec;
+    //   display: inline-block;
+    //   border-radius: 50%;
+    //   vertical-align: middle;
+    // }
+    // .radio_type:checked:before {
+    //   content: "";
+    //   width: 12px;
+    //   height: 12px;
+    //   border: 2px solid #21acec;
+    //   display: inline-block;
+    //   border-radius: 50%;
+    //   vertical-align: middle;
+    // }
+    // .radio_type:checked:after {
+    //   content: "";
+    //   width: 8px;
+    //   height: 8px;
+    //   text-align: center;
+    //   background: #21acec;
+    //   border-radius: 50%;
+    //   display: block;
+    //   position: absolute;
+    //   top: calc(50% - 4px);
+    //   left: 5px;
+    // }
+    // .radio_type:checked + label {
+    //   color: #edd19d;
+    // }
   }
 
   .input-item.ignore {
-    border-bottom: 1px solid #ccc;
-    margin-top: 10px;
+    border-bottom: 1px solid #d4d4d4;
+    height: 60px;
+    display: flex;
+    align-items: center;
     /deep/ .van-cell {
       padding: 0px 5px;
       height: 40px;
@@ -152,13 +196,17 @@ export default {
         width: 90px;
       }
     }
+    /deep/ .van-field__control:disabled {
+      color: #212121;
+    }
     /deep/ .van-cell__title.van-field__label {
-      font-weight: 600;
       font-size: 15px;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
+      color: #212121;
     }
     /deep/ input {
-      font-size: 16px;
+      font-size: 15px;
+      color: #212121;
     }
     .img-box-name {
       width: 21px;
@@ -184,13 +232,12 @@ export default {
     justify-content: space-between;
     .label {
       font-size: 12px;
-      color: #969799;
+      color: #919191;
     }
     .money {
       font-size: 16px;
       color: #212121;
       letter-spacing: 1px;
-      font-weight: 600;
       span {
         font-size: 18px;
         letter-spacing: 0px;

@@ -67,6 +67,9 @@ export default {
 /deep/ .van-tabs__wrap {
   // height: 40px;
 }
+/deep/ .van-hairline--top-bottom::after{
+  border-width:0;
+}
 .d44 {
   .van-ellipsis {
     color: #f44;

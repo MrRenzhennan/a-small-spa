@@ -59,13 +59,14 @@ export default {
   height: 200px;
   margin: 0 auto;
   margin-bottom: 15px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   border-radius: 7.5px;
   position: relative;
   .image-box {
     width: 100%;
     height: 160px;
     background-size: 100% 100%;
+    box-shadow: 0 8px 14px rgba(117, 117, 117, 0.4);
+    border-radius: 10px;
   }
   .btm-operation {
     width: 100%;

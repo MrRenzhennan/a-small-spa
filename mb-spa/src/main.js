@@ -26,7 +26,9 @@ import {
   Tab, 
   Tabs,
   Collapse, 
-  CollapseItem 
+  CollapseItem,
+  Swipe, 
+  SwipeItem  
 } from "vant";
 Vue.use(NavBar)
   .use(Image)
@@ -49,6 +51,8 @@ Vue.use(NavBar)
   .use(Tabs)
   .use(Collapse)
   .use(CollapseItem)
+  .use(Swipe)
+  .use(SwipeItem)
 ;
 
 new Vue({

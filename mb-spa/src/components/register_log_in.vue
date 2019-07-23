@@ -41,6 +41,7 @@ export default {
   position: absolute;
   top: 15px;
   right: 15px;
+  z-index: 10;
   .button-box {
     width: 70px;
     height: 25px;

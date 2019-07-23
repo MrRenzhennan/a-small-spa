@@ -108,12 +108,12 @@ export default {
       }
     }
     /deep/ .van-cell__title.van-field__label {
-      font-weight: 600;
       font-size: 15px;
       letter-spacing: 2px;
+      color: #212121;
     }
     /deep/ input {
-      font-size: 16px;
+      font-size: 15px;
     }
     /deep/ .van-field__button {
       color: #00a0e9;
