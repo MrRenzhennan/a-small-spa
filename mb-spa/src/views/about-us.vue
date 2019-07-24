@@ -58,17 +58,17 @@ export default {
 }
 .text {
   width: 100%;
-  line-height: 25px;
+  line-height: 26px;
   letter-spacing: 1px;
   box-sizing: border-box;
   padding-left: 18px;
   padding-right: 15px;
-  font-size: 15px;
+  font-size: 16px;
   color: #191919;
 }
 .title {
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 17px;
   margin-top: 10px;
 }
 .bottom {

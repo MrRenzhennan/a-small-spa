@@ -2,15 +2,15 @@
 <template>
   <div>
     <div class="register_log_in">
-      <div class="button-box" v-if="!this.$store.state.name">
-        <router-link to="/login">
+      <div class="button-box" v-if="!this.$store.state.name" @click="GoLogin">
+        <!-- <router-link to="/login"> -->
           <span>登录</span>
-        </router-link>
+        <!-- </router-link> -->
 
         <span>|</span>
-        <router-link to="/registered">
+        <!-- <router-link to="/registered"> -->
           <span>注册</span>
-        </router-link>
+        <!-- </router-link> -->
       </div>
       <div class="my-home" v-if="this.$store.state.name">
         <van-image class="mycode" :src="require('../assets/heard.png')" />
@@ -33,7 +33,11 @@ export default {
 
   computed: {},
 
-  methods: {}
+  methods: {
+    GoLogin(){
+      this.$router.push('/login')
+    }
+  }
 };
 </script>
 <style lang='scss' scoped>

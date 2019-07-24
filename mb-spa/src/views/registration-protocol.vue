@@ -53,6 +53,10 @@ export default {
 };
 </script>
 <style lang='scss' scoped>
+/deep/ .van-nav-bar{
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 10px;
+}
 .text {
   width: 100%;
   line-height: 26px;
@@ -60,11 +64,11 @@ export default {
   box-sizing: border-box;
   padding-left: 18px;
   padding-right: 15px;
-  font-size: 15px;
+  font-size: 16px;
 }
 .title {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 17px;
+  font-weight: 700;
   margin-top: 10px;
 }
 .bottom{
