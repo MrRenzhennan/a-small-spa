@@ -176,12 +176,22 @@
           <span>姓名</span>
           <input type="text" />
         </div>
-        <div class="input-name">
+        <div class="input-name" @click="GetChildBirthday">
           <span>生日</span>
-          <input type="text" />
+          <input type="text" disabled />
         </div>
       </div>
     </van-dialog>
+
+    <van-popup v-model="ChildGetBirthdayshow" position="bottom">
+      <van-datetime-picker
+        v-model="ChildGetBirthday"
+        type="date"
+        :min-date="new Date('1800-01-01')"
+        @confirm="confirmChildBirthday"
+        @cancel="cancelChildBirthday"
+      />
+    </van-popup>
   </div>
 </template>
 
@@ -201,13 +211,24 @@ export default {
       BirthdayDate: "",
       GetGenderdactions: [{ name: "保密" }, { name: "男" }, { name: "女" }],
       GetCuteBabyshow: false,
-      radio: ""
+      radio: "",
+      ChildGetBirthday: "",
+      ChildGetBirthdayshow: false
     };
   },
 
   computed: {},
 
   methods: {
+    GetChildBirthday() {
+      this.ChildGetBirthdayshow = true;
+    },
+    confirmChildBirthday() {
+      this.ChildGetBirthdayshow = false;
+    },
+    cancelChildBirthday() {
+      this.ChildGetBirthdayshow = false;
+    },
     //头像
     GetHeard() {
       this.GetHeardshow = true;
@@ -276,6 +297,7 @@ export default {
     border-radius: 5px;
     box-sizing: border-box;
     padding-left: 5px;
+    background: #fff;
   }
 }
 .el-form {
@@ -313,7 +335,6 @@ export default {
   width: 100%;
   box-sizing: border-box;
   padding: 0 15px;
-  
 
   .prompt {
     color: #b9b9b9;
