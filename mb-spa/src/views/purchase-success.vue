@@ -52,7 +52,7 @@ export default {
         height: 60px;
         border-radius: 50%;
         background: #1faced;
-        margin-top: 40px;
+        margin-top: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
