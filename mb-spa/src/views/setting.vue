@@ -96,7 +96,7 @@
           </div>
         </van-nav-bar>
       </div>
-      <div class="list-item" @click="GetCuteBaby">
+      <div class="list-item border-bottom-none" @click="GetCuteBaby">
         <van-nav-bar>
           <div class slot="left">
             <span class>我的萌宝</span>
@@ -136,9 +136,7 @@
           </div>
         </van-nav-bar>
       </div>
-      <div class="GoOut" @click="GoOut">
-        退出登陆
-      </div>
+      <div class="GoOut" @click="GoOut">退出登陆</div>
     </div>
     <van-action-sheet
       v-model="GetHeardshow"
@@ -175,10 +173,12 @@
           <van-radio name="2">小王子</van-radio>
         </van-radio-group>
         <div class="input-name">
-          <span>姓名</span><input type="text" />
+          <span>姓名</span>
+          <input type="text" />
         </div>
         <div class="input-name">
-          <span>生日</span><input type="text" />
+          <span>生日</span>
+          <input type="text" />
         </div>
       </div>
     </van-dialog>
@@ -201,7 +201,7 @@ export default {
       BirthdayDate: "",
       GetGenderdactions: [{ name: "保密" }, { name: "男" }, { name: "女" }],
       GetCuteBabyshow: false,
-      radio:''
+      radio: ""
     };
   },
 
@@ -248,17 +248,15 @@ export default {
     GetCuteBaby() {
       this.GetCuteBabyshow = true;
     },
-    AboutUs(){
+    AboutUs() {
       this.$router.push("/about-us");
     },
     //服务协议
-    ServiceAgreement(){
-      this.$router.push('/service-agreement')
+    ServiceAgreement() {
+      this.$router.push("/service-agreement");
     },
     //退出登陆
-    GoOut(){
-
-    }
+    GoOut() {}
   }
 };
 </script>
@@ -280,32 +278,32 @@ export default {
     padding-left: 5px;
   }
 }
-.el-form{
+.el-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /deep/ .van-radio-group{
+  /deep/ .van-radio-group {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     width: 200px;
     margin-top: 10px;
-    .van-radio__label{
+    .van-radio__label {
       margin-left: 3px;
       font-size: 12px;
     }
-    .van-icon{
-      font-size: 12px
+    .van-icon {
+      font-size: 12px;
     }
   }
-  .input-name{
+  .input-name {
     display: flex;
     align-items: center;
     margin-top: 15px;
-    span{
+    span {
       width: 40px;
       font-size: 12px;
     }
-    input{
+    input {
       width: calc(100% - 30px);
       font-size: 12px;
     }
@@ -315,18 +313,20 @@ export default {
   width: 100%;
   box-sizing: border-box;
   padding: 0 15px;
+  
+
   .prompt {
     color: #b9b9b9;
   }
   /deep/ .van-nav-bar {
     color: #212121;
-    border-bottom: 1px solid #ececec;
+    // border-bottom: 1px solid #ececec;
     height: 60px;
     line-height: 60px;
     font-size: 16px;
-    .heard-img{
-       width:35px;
-       height:35px;
+    .heard-img {
+      width: 35px;
+      height: 35px;
     }
     .img-box img {
       margin-top: 13px;
@@ -338,8 +338,14 @@ export default {
       font-size: 18px;
     }
   }
+  .border-bottom-none {
+    /deep/ .van-hairline--bottom::after {
+      border-bottom-width: 0px;
+    }
+  }
 }
-.GoOut{
+
+.GoOut {
   width: 100%;
   height: 60px;
   background: #fff;

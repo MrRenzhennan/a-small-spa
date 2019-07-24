@@ -1,8 +1,8 @@
 <!-- tabBar组件 -->
 <template>
   <div class="tab-bar">
-    <van-tabs v-model="active">
-      <van-tab title="购买会员" :class="active == 0 ? 'd44' : ''"></van-tab>
+    <van-tabs v-model="active" title-active-color="#d44">
+      <van-tab title="购买会员"></van-tab>
       <van-tab title="会员约课"></van-tab>
       <van-tab title="研学活动"></van-tab>
       <van-tab title="本地新闻"></van-tab>
@@ -19,7 +19,6 @@ export default {
     };
   },
   mounted() {
-    console.log(this.$router.currentRoute.path);
     switch (this.$router.currentRoute.path) {
       case "/purchase_member":
         this.active = 0;
@@ -70,11 +69,7 @@ export default {
 /deep/ .van-hairline--top-bottom::after{
   border-width:0;
 }
-.d44 {
-  .van-ellipsis {
-    color: #f44;
-  }
-}
+
 /deep/ .van-tabs__line {
   width: 60px;
   transform: translateX(60px) translateX(-50%);

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="card-item" v-for="(item,index) in itemArray" :key="index">
-      <router-link :to="item.link">
+      <router-link :to="item.link" class="item-a">
         <div class="image-box" v-bind:style="{'background-image':'url('+item.src+')'}"></div>
         <div class="btm-operation">
           <p class="title">{{item.title}}</p>
@@ -56,11 +56,17 @@ export default {
 <style lang='scss' scoped>
 .card-item {
   width: 340px;
-  height: 200px;
+  // height: 200px;
   margin: 0 auto;
   margin-bottom: 15px;
   border-radius: 7.5px;
   position: relative;
+  .item-a{
+    // display: flex;
+    // flex-direction: column;
+    // align-content: space-between;
+    // height: 100%;
+  }
   .image-box {
     width: 100%;
     height: 160px;
@@ -76,6 +82,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 10px;
     .title {
       font-size: 12.5px;
       letter-spacing: 1px;

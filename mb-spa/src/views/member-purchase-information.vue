@@ -119,6 +119,8 @@ export default {
     .label {
       font-size: 15px;
       letter-spacing: 1px;
+      padding-left: 5px;
+      box-sizing: border-box;
     }
     .input-box {
       display: flex;
@@ -184,7 +186,7 @@ export default {
 
   .input-item.ignore {
     border-bottom: 1px solid #d4d4d4;
-    height: 60px;
+    height: 50px;
     display: flex;
     align-items: center;
     /deep/ .van-cell {
@@ -225,7 +227,7 @@ export default {
   }
 
   .input-item.ignore.payment-amount {
-    margin-top: 65px;
+    margin-top: 30px;
     height: 40px;
     display: flex;
     align-items: center;
