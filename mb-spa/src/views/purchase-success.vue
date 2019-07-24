@@ -12,7 +12,7 @@
         </div>
         <div class="text-sc">购买成功</div>
         <div class="text-ms">您已成为科学面壁人超级会员</div>
-        <van-image class="img-box" :src="require('../assets/code.png')" />
+        <van-image class="img-box" :src="require('../assets/code.jpg')" />
         <div class="ewmT">长按二维码关注微信公众号</div>
         <div class="ewmT">推荐会员有惊喜</div>
         <div class="btn-box">
@@ -36,7 +36,7 @@ export default {
           this.$router.push('/')
       },
       GoClass(){
-          this.$router.push('/appointment-course')
+          this.$router.push('/member_appointment')
       }
   }
 };
@@ -52,7 +52,7 @@ export default {
         height: 60px;
         border-radius: 50%;
         background: #1faced;
-        margin-top: 95px;
+        margin-top: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -75,9 +75,9 @@ export default {
         letter-spacing: 1px;
     }
     .img-box{
-        width: 102px;
-        height: 102px;
-        margin-top: 30px;
+        width: 200px;
+        height: 200px;
+        margin-top: 20px;
         margin-bottom: 13px;
     }
     .ewmT{
