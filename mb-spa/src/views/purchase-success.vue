@@ -52,7 +52,7 @@ export default {
         height: 60px;
         border-radius: 50%;
         background: #1faced;
-        margin-top: 40px;
+        margin-top: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -70,26 +70,26 @@ export default {
     }
     .text-ms{
         color: #575757;
-        margin-top: 15px;
+        margin-top: 10px;
         font-size: 18px;
         letter-spacing: 1px;
     }
     .img-box{
         width: 200px;
         height: 200px;
-        margin-top: 20px;
+        margin-top: 10px;
         margin-bottom: 13px;
     }
     .ewmT{
         color: #1faced;
-        margin-top: 15px;
+        margin-top: 10px;
         font-size: 18px;
         letter-spacing: 1px;
         margin-top: 5px;
     }
     .btn-box{
         width: 100%;
-        margin-top: 45px;
+        margin-top: 30px;
         display: flex;
         justify-content: space-around;
         align-items: center;

@@ -6,9 +6,9 @@
         <NavBar title="科学面壁人用户协议" />
       </div>
     </div>
-    <div>
+    <div class="text">
       <p
-        class="server_01"
+        class="server_02"
       >请服务使用者(以下称“用户”)仔细阅读以下各项条款。如用户不同意本服务条款任意内容，请不要注册或使用购买服务。用户通过本平台阅读本服务条款并点击“同意”按钮完成购买，即表示用户与北京面壁人教育科技有限公司(以下称“科学面壁人”)已达成协议，自愿接受本服务条款的所有内容。</p>
       <p
         class="server_02"
@@ -149,36 +149,34 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-.server_01 {
-  margin-top: 20px;
-  width: 100%;
-  line-height: 25px;
-  letter-spacing: 1px;
-  box-sizing: border-box;
-  padding-left: 15px;
-  padding-right: 12px;
-  font-size: 14px;
+/deep/ .van-nav-bar{
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 10px;
+}
+.text{
+  color: #191919;
 }
 
 .server_02 {
   width: 100%;
-  line-height: 25px;
-  letter-spacing: 1px;
-  box-sizing: border-box;
-  padding-left: 15px;
-  padding-right: 12px;
-  font-size: 14px;
-}
-
-.server_03 {
-  width: 100%;
-  line-height: 25px;
+  line-height: 26px;
   letter-spacing: 1px;
   box-sizing: border-box;
   padding-left: 15px;
   padding-right: 12px;
   font-size: 16px;
+}
+
+.server_03 {
+  width: 100%;
+  line-height: 26px;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+  padding-left: 18px;
+  padding-right: 15px;
+  font-size: 17px;
   font-weight: 700;
+  margin-top: 10px;
 }
 
 .serverBottom {

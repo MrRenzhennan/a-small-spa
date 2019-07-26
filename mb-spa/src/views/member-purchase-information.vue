@@ -26,8 +26,8 @@
         </div>
       </div>
 
-      <div class="input-item ignore">
-        <van-field v-model="age" placeholder="请输入学生年龄" label="学生年龄"></van-field>
+      <div class="input-item ignore" @click="GetBirthday">
+        <van-field v-model="age" placeholder="请输入出生日期" label="出生日期" disabled></van-field>
       </div>
 
       <div class="input-item ignore">
@@ -35,7 +35,7 @@
       </div>
 
       <div class="input-item ignore">
-        <van-field v-model="code" placeholder="输入验证" label="验证码:">
+        <van-field v-model="code" placeholder="输入验证码" label="验证码:">
           <span slot="button">获取验证码</span>
         </van-field>
       </div>
@@ -59,6 +59,16 @@
     <div class="btn-box">
       <van-button type="info" @click="registered">微信支付</van-button>
     </div>
+
+    <van-popup v-model="GetBirthdayshow" position="bottom">
+      <van-datetime-picker
+        v-model="age"
+        type="date"
+        :min-date="new Date('1980-01-01')"
+        @confirm="confirmBirthday"
+        @cancel="cancelBirthday"
+      />
+    </van-popup>
 
     <van-popup v-model="GetAreaShow" position="bottom">
       <van-area
@@ -84,14 +94,23 @@ export default {
       age: "",
       phone: "",
       code: "",
-
       address: "",
       addressAll: "",
       GetAreaShow: false,
+      GetBirthdayshow: false,
       province_list: province_list
     };
   },
   methods: {
+    GetBirthday() {
+      this.GetBirthdayshow = true;
+    },
+    confirmBirthday() {
+      this.GetBirthdayshow = false;
+    },
+    cancelBirthday() {
+      this.GetBirthdayshow = false;
+    },
     GetArea() {
       this.GetAreaShow = true;
     },

@@ -2,7 +2,10 @@
   <div>
     <div class="card-item" v-for="(item,index) in itemArray" :key="index">
       <router-link :to="item.link" class="item-a">
-        <div class="image-box" v-bind:style="{'background-image':'url('+item.src+')'}"></div>
+        <!-- <div class="image-box" v-bind:style="{'background-image':'url('+item.src+')'}"></div> -->
+        <div class="image-box">
+          <van-image class="image" :src="item.src" />
+        </div>
         <div class="btm-operation">
           <p class="title">{{item.title}}</p>
           <p
@@ -61,18 +64,23 @@ export default {
   margin-bottom: 15px;
   border-radius: 7.5px;
   position: relative;
-  .item-a{
+  .item-a {
     // display: flex;
     // flex-direction: column;
     // align-content: space-between;
     // height: 100%;
   }
   .image-box {
-    width: 100%;
-    height: 160px;
-    background-size: 100% 100%;
-    box-shadow: 0 8px 14px rgba(117, 117, 117, 0.4);
-    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    .image {
+      width: (680px / 2);
+      height: (360px / 2);
+    }
+    /deep/ .van-image__img {
+      border-radius: 10px;
+      box-shadow: 0 8px 14px rgba(117, 117, 117, 0.4);
+    }
   }
   .btm-operation {
     width: 100%;

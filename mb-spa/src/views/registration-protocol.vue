@@ -34,6 +34,7 @@
       7.法律使用及纠纷解决
       本服务协议适用中华人民共和国的法律。如发生部分条款因违反法律而无效的，其它条款的效力不受影响。会员和北京面壁人教育科技有限公司之间发生任何的纠纷，由北京面壁人教育科技有限公司所在地人民法院管辖。
     </div>
+    <div class="bottom"></div>
   </div>
 </template>
 
@@ -52,17 +53,26 @@ export default {
 };
 </script>
 <style lang='scss' scoped>
+/deep/ .van-nav-bar{
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 10px;
+}
 .text {
   width: 100%;
-  line-height: 25px;
+  line-height: 26px;
   letter-spacing: 1px;
   box-sizing: border-box;
-  padding-left: 15px;
-  padding-right: 12px;
-  font-size: 14px;
+  padding-left: 18px;
+  padding-right: 15px;
+  font-size: 16px;
 }
 .title {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 700;
+  margin-top: 10px;
+}
+.bottom{
+    width: 100%;
+  height: 30px;
 }
 </style>
