@@ -76,6 +76,10 @@ export default {
       width: 20px;
       height: 20px;
       margin-top: 2px;
+      border-radius: 50%;
+      img{
+        border-radius: 50%;
+      }
     }
     a {
       font-size: 12px;

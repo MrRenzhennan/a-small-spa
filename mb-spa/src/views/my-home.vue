@@ -208,6 +208,9 @@ export default {
       height: 61px;
       margin-top: 5px;
       border-radius: 50%;
+      img{
+        border-radius: 50%;
+      }
     }
     p {
       font-size: 14px;
