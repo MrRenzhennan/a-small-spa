@@ -17,7 +17,7 @@
         <div class="ewmT">推荐会员有惊喜</div>
         <div class="btn-box">
             <van-button class="GoHome" type="info" @click="GoHome">去首页</van-button>
-            <van-button class="GoClass" type="info" @click="GoClass">去约课</van-button>
+            <!-- <van-button class="GoClass" type="info" @click="GoClass">去约课</van-button> -->
         </div>
     </div>
   </div>
@@ -75,14 +75,14 @@ export default {
         letter-spacing: 1px;
     }
     .img-box{
-        width: 200px;
-        height: 200px;
+        width: 230px;
+        height: 230px;
         margin-top: 10px;
-        margin-bottom: 13px;
+        // margin-bottom: 13px;
     }
     .ewmT{
         color: #1faced;
-        margin-top: 10px;
+        margin-top: 5px;
         font-size: 18px;
         letter-spacing: 1px;
         margin-top: 5px;
@@ -94,13 +94,14 @@ export default {
         justify-content: space-around;
         align-items: center;
         /deep/ .van-button{
-            width: 100px;
+            width: 120px;
             height:38px;
             line-height: 38px;
             border-radius: 38px;
             border:none;
             &.GoHome{
-                background: linear-gradient(to right, #dad9d9, #a1a1a1);
+                // background: linear-gradient(to right, #dad9d9, #a1a1a1);
+                background: linear-gradient(to right, #59caff, #01a0e9);
             }
             &.GoClass{
                 background: linear-gradient(to right, #59caff, #01a0e9);

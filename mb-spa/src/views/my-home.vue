@@ -206,10 +206,13 @@ export default {
     .heard-logo-img {
       width: 61px;
       height: 61px;
+      margin-top: 5px;
+      border-radius: 50%;
     }
     p {
       font-size: 14px;
       text-align: center;
+      margin-top: -5px;
     }
   }
   .user-info {
@@ -218,7 +221,7 @@ export default {
     .user-name {
       display: flex;
       align-items: center;
-      margin-top: 20px;
+      margin-top: 15px;
       font-size: 16px;
       letter-spacing: 2px;
       margin-bottom: 10px;

@@ -31,7 +31,7 @@
       </div>
 
       <div class="input-item ignore">
-        <van-field v-model="phone" placeholder="请输入手机号码" label="手机"></van-field>
+        <van-field v-model="phone" placeholder="请输入手机号码" label="手机号码"></van-field>
       </div>
 
       <div class="input-item ignore">
@@ -41,7 +41,7 @@
       </div>
 
       <div class="input-item ignore" @click="GetArea">
-        <van-field v-model="address" disabled placeholder="请输入地区" label="地区"></van-field>
+        <van-field v-model="address" disabled placeholder="请输入所在地区" label="所在地区"></van-field>
       </div>
 
       <div class="input-item ignore">
@@ -49,7 +49,7 @@
       </div>
 
       <div class="input-item ignore payment-amount">
-        <div class="label">支付金额 ：</div>
+        <div class="label">支付金额<span class="mo">:</span></div>
         <div class="money">
           合计:
           <span>¥999.0</span>
@@ -254,6 +254,10 @@ export default {
     .label {
       font-size: 12px;
       color: #919191;
+      .mo{
+        font-size: 16px;
+        margin-left: 5px;
+      }
     }
     .money {
       font-size: 16px;

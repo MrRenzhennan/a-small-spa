@@ -85,16 +85,16 @@ export default {
   display: flex;
   justify-content: center;
   /deep/ .img-box {
-    margin-top: 65px;
-    width: 196px;
-    height: 64px;
+    margin-top: 45px;
+    width: (888px / 6);
+    height: (722px / 6);
   }
 }
 .formgroup {
   width: 100%;
   box-sizing: border-box;
   padding: 0 30px;
-  margin-top: 60px;
+  margin-top: 40px;
   .input-item.ignore {
     border-bottom: 1px solid #ccc;
     margin-top: 10px;

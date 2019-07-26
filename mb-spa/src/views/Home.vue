@@ -9,14 +9,14 @@
              <van-image
               width="100%"
               class="swiper-title"
-              :src="require('../assets/swiper_bg.png')"
+              :src="require('../assets/swiper_bg1.png')"
             />
            </van-swipe-item>
             <van-swipe-item>
               <van-image
               width="100%"
               class="swiper-title"
-              :src="require('../assets/swiper_bg.png')"
+              :src="require('../assets/swiper_bg2.jpg')"
             />
             </van-swipe-item>
         </van-swipe>
@@ -39,8 +39,8 @@ export default {
   data(){
     return{
       images: [
-        require('./../assets/swiper_bg.png'),
-        require('./../assets/swiper_bg.png'),
+        require('./../assets/swiper_bg1.png'),
+        require('./../assets/swiper_bg2.jpg'),
       ]
     }
   }
@@ -53,6 +53,7 @@ export default {
   .swiper-box{
     box-shadow: 0 0px 7px rgba(68, 68, 68, 0.4);
     margin-bottom: 8px;
+    height: 200px;
   }
   .swiper-title {
     width: 100%;

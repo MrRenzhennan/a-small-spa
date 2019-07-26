@@ -136,7 +136,7 @@
           </div>
         </van-nav-bar>
       </div>
-      <div class="GoOut" @click="GoOut">退出登陆</div>
+      <div class="GoOut" @click="GoOut">退出账号</div>
     </div>
     <van-action-sheet
       v-model="GetHeardshow"
@@ -373,5 +373,18 @@ export default {
   text-align: center;
   line-height: 60px;
   font-size: 16px;
+}
+
+input[disabled],
+input:disabled {
+  border: 1px solid #b9b9b9;
+  background-color: #fff;
+  color: #000;
+}
+//IE6 Using Javascript to add CSS class "disabled"
+* html input.disabled {
+  border: 1px solid #b9b9b9;
+  background-color: #fff;
+  color: #000;
 }
 </style>

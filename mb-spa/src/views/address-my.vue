@@ -135,6 +135,8 @@ export default {
         margin-top: 5px;
         font-size: 14px;
         color: #000;
+        word-wrap: break-word;
+        word-break: normal;
       }
     }
     .i3 {
