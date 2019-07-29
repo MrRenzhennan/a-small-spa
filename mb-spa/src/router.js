@@ -35,6 +35,10 @@ const BalanceWithdrawalSuccess = () => import('./views/balance-withdrawal-succes
 const AddressMy = () => import('./views/address-my.vue');//我的地址
 const AddressSetting = () => import('./views/address-setting.vue');//设置地址
 const ServiceAgreement = () => import('./views/service-agreement.vue');//服务协议
+
+//图片裁剪
+const TextVueCropper = () => import('./views/vue-cropper.vue');//服务协议
+
 Vue.use(Router)
 
 export default new Router({
@@ -173,6 +177,11 @@ export default new Router({
       path: '/service-agreement',
       name: 'service-agreement',
       component: ServiceAgreement,
+    },
+    {
+      path: '/TextVueCropper',
+      name: 'TextVueCropper',
+      component: TextVueCropper,
     },
   ],
   scrollBehavior (to, from, savedPosition) {
