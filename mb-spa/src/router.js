@@ -37,7 +37,8 @@ const AddressSetting = () => import('./views/address-setting.vue');//设置地�
 const ServiceAgreement = () => import('./views/service-agreement.vue');//服务协议
 
 //图片裁剪
-const TextVueCropper = () => import('./views/vue-cropper.vue');//服务协议
+const TextVueCropper = () => import('./views/vue-cropper.vue');//裁剪demo
+const ImgCropper = () => import('./views/img-cropper.vue');//上传图片裁剪
 
 Vue.use(Router)
 
@@ -177,6 +178,11 @@ export default new Router({
       path: '/service-agreement',
       name: 'service-agreement',
       component: ServiceAgreement,
+    },
+    {
+      path: '/img-cropper',
+      name: 'ImgCropper',
+      component: ImgCropper,
     },
     {
       path: '/TextVueCropper',

@@ -12,9 +12,9 @@
         </div>
         <div class="text-sc">购买成功</div>
         <div class="text-ms">您已成为科学面壁人超级会员</div>
-        <van-image class="img-box" :src="require('../assets/code.jpg')" />
-        <div class="ewmT">长按二维码关注微信公众号</div>
-        <div class="ewmT">推荐会员有惊喜</div>
+        <van-image class="img-box" :src="require('../assets/code.png')" />
+        <div class="ewmT">扫码进群</div>
+        <div class="ewmT">面壁人家长交流群</div>
         <div class="btn-box">
             <van-button class="GoHome" type="info" @click="GoHome">去首页</van-button>
             <!-- <van-button class="GoClass" type="info" @click="GoClass">去约课</van-button> -->
