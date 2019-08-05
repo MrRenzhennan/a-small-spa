@@ -6,6 +6,8 @@ import PurchaseMember from "@/views/purchase_member.vue";
 const MemberAppointment = () => import("@/views/member_appointment.vue");
 const ResearchActivities = () => import("@/views/research_activities.vue");
 const LocalNews = () => import("@/views/local_news.vue");
+const LocalNewsDetails = () => import("@/views/local_news_details.vue");
+
 
 const MemberPurchaseInformation = () => import('./views/member-purchase-information.vue');//会员购买信息
 const PurchaseSuccess = () => import('./views/purchase-success.vue');//购买成功
@@ -73,6 +75,11 @@ export default new Router({
           component: LocalNews,
         }
       ]
+    },
+    {
+      path: '/local_news_details',
+      name: 'local_news_details',
+      component: LocalNewsDetails,
     },
     {
       path: '/login',
