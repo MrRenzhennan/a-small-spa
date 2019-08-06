@@ -208,7 +208,7 @@ export default {
       height: 61px;
       margin-top: 5px;
       border-radius: 50%;
-      img{
+      /deep/ img{
         border-radius: 50%;
       }
     }

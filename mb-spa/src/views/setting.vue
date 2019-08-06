@@ -383,6 +383,9 @@ export default {
     .heard-img {
       width: 35px;
       height: 35px;
+      /deep/ img{
+        border-radius: 50%;
+      }
     }
     .img-box img {
       margin-top: 13px;

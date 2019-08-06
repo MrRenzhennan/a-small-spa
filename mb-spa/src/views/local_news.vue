@@ -6,7 +6,7 @@
         <div class="item">
           <div class="title">教育孩子是王道，是执着的栽培自己!</div>
           <div class="img-box">
-            <van-image class="image" :src="require('../assets/new-img.png')" />
+            <van-image class="image" :src="require('../assets/item1.png')" />
           </div>
         </div>
       </router-link>
@@ -15,7 +15,7 @@
         <div class="item">
           <div class="title">教育孩子是王道，是执着的栽培自己!</div>
           <div class="img-box">
-            <van-image class="image" :src="require('../assets/new-img.png')" />
+            <van-image class="image" :src="require('../assets/item1.png')" />
           </div>
         </div>
       </router-link>
@@ -24,7 +24,7 @@
         <div class="item">
           <div class="title">教育孩子是王道，是执着的栽培自己!</div>
           <div class="img-box">
-            <van-image class="image" :src="require('../assets/new-img.png')" />
+            <van-image class="image" :src="require('../assets/item1.png')" />
           </div>
         </div>
       </router-link>
