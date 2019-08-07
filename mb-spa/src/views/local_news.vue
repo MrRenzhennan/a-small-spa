@@ -4,7 +4,7 @@
     <div class="new-list">
       <router-link to="/local_news_details">
         <div class="item">
-          <div class="title">教育孩子是王道，是执着的栽培自己!</div>
+          <div class="title">教育!</div>
           <div class="img-box">
             <van-image class="image" :src="require('../assets/item1.png')" />
           </div>
@@ -64,6 +64,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     .title {
+      flex-grow:1;
       font-size: 16px;
       height: 75px;
       box-sizing: border-box;
