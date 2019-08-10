@@ -21,6 +21,12 @@ const ForgetPassword = () => import('./views/forget-password.vue');//忘记密�
 const RegistrationProtocol = () => import('./views/registration-protocol.vue');//注册协议
 const AboutUs = () => import('./views/about-us.vue');//关于我们
 
+const SelectSeminar = () => import('./views/select-seminar.vue');//选择场次
+const SelectLaboratory = () => import('./views/select-laboratory.vue');//选择实验室
+const ConfirmReservationInformation = () => import('./views/confirm-reservation-information.vue');//确认预约信息
+const ScheduledActivities = () => import('./views/scheduled-activities.vue');//已预约活动
+
+
 const MyHome = () => import('./views/my-home.vue');//我的
 const Setting = () => import('./views/setting.vue');//设置
 
@@ -190,6 +196,26 @@ export default new Router({
       path: '/img-cropper',
       name: 'ImgCropper',
       component: ImgCropper,
+    },
+    {
+      path: '/select-seminar',
+      name: 'SelectSeminar',
+      component: SelectSeminar,
+    },
+    {
+      path: '/select-laboratory',
+      name: 'SelectLaboratory',
+      component: SelectLaboratory,
+    },
+    {
+      path: '/confirm-reservation-information',
+      name: 'ConfirmReservationInformation',
+      component: ConfirmReservationInformation,
+    },
+    {
+      path: '/scheduled-activities',
+      name: 'ScheduledActivities',
+      component: ScheduledActivities,
     },
     {
       path: '/TextVueCropper',
